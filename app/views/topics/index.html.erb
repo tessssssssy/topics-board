@@ -11,8 +11,10 @@
     <div class="topic-container">
         <h1>Topic title</h1>
         <button>Vote</button>
-        <button>Edit</button>
-        <button>Delete</button>
+        <% if user_signed_in? %>
+          <button>Edit</button>
+          <button>Delete</button>
+        <% end %>
     </div>
 <%end%>
 
