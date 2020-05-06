@@ -1,0 +1,18 @@
+<% if user_signed_in? %>
+    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+    
+<% else %>
+    <%= link_to "login", new_user_session_path %>
+    <%= link_to "signup", new_user_registration_path %>
+<% end %>
+
+<% topics = (0..10).to_a %>
+<% topics.each do |topic| %>
+    <div class="topic-container">
+        <h1>Topic title</h1>
+        <button>Vote</button>
+        <button>Edit</button>
+        <button>Delete</button>
+    </div>
+<%end%>
+
