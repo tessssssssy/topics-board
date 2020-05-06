@@ -6,13 +6,41 @@
     <%= link_to "signup", new_user_registration_path %>
 <% end %>
 
-<% topics = (0..10).to_a %>
-<% topics.each do |topic| %>
-    <div class="topic-container">
-        <h1>Topic title</h1>
-        <button>Vote</button>
-        <button>Edit</button>
-        <button>Delete</button>
-    </div>
-<%end%>
+<div class="content-container">
+    <% topics = (0..3).to_a %>
+    <% topics.each do |topic| %>
+        <div class="topic-container">
+            <h1 class="topic-title">Authentication</h1>
+            <div class="vote-container">
+                <button class="vote-button">Vote</button>
+                <p>10 votes</p>
+            </div>           
+        </div>
+        <div class="topic-container">
+            <h1 class="topic-title">Database migrations</h1>
+            <div class="vote-container">
+                <button class="vote-button">Vote</button>
+                <p>10 votes</p>
+            </div>           
+        </div>
+        <div class="topic-container">
+            <h1 class="topic-title">Routes</h1>
+            <div class="vote-container">
+                <button class="vote-button">Vote</button>
+                <p>10 votes</p>
+            </div>           
+        </div>
+        <div class="topic-container">
+            <h1 class="topic-title">Lord of the Rings</h1>
+            <div class="vote-container">
+                <button class="vote-button">Vote</button>
+                <p>10 votes</p>
+            </div>           
+        </div>
+    <%end%>
+</div>
+
+
+
+
 
