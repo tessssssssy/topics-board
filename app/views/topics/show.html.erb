@@ -1,17 +1,18 @@
-<div class="topic-container">
+
+<div class="outer-container">
+<div class="show-container">
             <h1 class="topic-title"><%=@topic.title%></h1>
             <p><%=@topic.description%></p>
             <div class="vote-container">
-                <%= link_to "Vote", "/topics/#{@topic.id}/votes", method: :post %>
                 <p><%=@topic.votes.length%> votes</p>
             </div>
             <% if current_user == @topic.user %>
                 <% if can? :edit, @topic %>
-                    <%= link_to "Edit", "/topics/#{@topic.id}/edit" %>
+                    <%= link_to "Edit", "/topics/#{@topic.id}/edit", class: 'edit-button' %>
                 <% end %>
                 <% if can? :destroy, @topic %>
-                    <%= link_to "Delete", "/topics/#{@topic.id}", method: :delete %>  
+                    <%= link_to "Delete", "/topics/#{@topic.id}", method: :delete, class: 'edit-button'%>  
                 <%end%>
             <%end%>        
         </div>
-
+</div>

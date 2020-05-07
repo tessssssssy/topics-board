@@ -4,9 +4,25 @@
 
 body {
     width: 100vw;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Nunito', sans-serif;
+    margin: 10px auto;
+    font-weight: 300;
 }
 
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .heading {
+        font-size: 48pt;
+        margin: 20px 0px;
+    }
+    h3 {
+        font-size: 24pt;
+        font-weight: 300;
+        margin-top: 0px;
+    }
+}
 .content-container {
     display: flex;
     flex-wrap: wrap;
@@ -15,56 +31,142 @@ body {
     justify-content: center;
     .topic-container:nth-of-type(4n) {
         border-radius: 50px 50px 0px 50px;
+        background-color: white;
+        color: #3c32a8;
         h1 {
-            color: cyan;
+            color: #3c32a8;
         }
     }
     .topic-container:nth-of-type(4n):hover {
+        background-color: #3c32a8;
+        color: white;
         cursor: pointer;
+        transition: 0.5s
+        h1 {
+            color: white;
+        }
     }
     .topic-container:nth-of-type(4n + 1) {
-        background-color: white;
-        border: 5px solid white;
-        border-radius: 50px 0px 50px 50px;
         color: orangered;
+        // border: 8px solid orangered;
+        border-radius: 50px 0px 50px 50px;
+        background-color: white;
         h1 {
             color: orangered;     
         }
+        .edit-button {
+            padding: 5px;
+            border: 2px solid orangered;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
     }
     .topic-container:nth-of-type(4n + 1):hover {
         cursor: pointer;
+        color: white;
+        background-color:orangered;
+        transition: 0.5s;
+        h1 {
+            color: white;     
+        }
+        .edit-button {
+            padding: 5px;
+            border: 2px solid white;
+            border-radius: 5px;
+            margin: 5px;
+        }
     }
     .topic-container:nth-of-type(4n + 2) {
-        color: mediumvioletred;
+        color: #28bfa4;
         border-radius: 0px 50px 50px 50px;
+        background-color: white;
         h1 {
-            color: mediumvioletred;          
+            color: #28bfa4;          
         }
     }
     .topic-container:nth-of-type(4n + 2):hover {
+        background-color: #28bfa4;
+        color: white;
+        cursor: pointer;
+        h1 {
+            color: white;          
+        }
+    }
+
+    .topic-container:nth-of-type(4n + 3) {
+        background-color: #ed0585;
+        border-radius: 0px 50px 50px 50px;
+        border: 5px solid white;
+        color: white;
+        h1 {
+            color: white;          
+        }
+        .edit-button {
+            padding: 5px;
+            border: 2px solid #ed0585;
+            border-radius: 5px;
+            margin: 5px;
+        }
+    }
+    .topic-container:nth-of-type(4n + 3):hover {
         background-color: white;
         cursor: pointer;
+        
     }
+
     .topic-container {
         border-radius: 50px 50px 50px 0px;
         background-color: white;
-        border: 5px solid white;
+        // border: 5px solid white;
+        box-shadow: 10px 10px 20px -9px rgba(105,105,105,1);
         padding: 20px;
         margin: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        a, a:visited {
+            color: inherit;
+        }
+        
         .topic-title {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 24pt;
+            font-size: 28pt;
             margin: 10px;
+            font-weight: 300;
+            // opacity: 60%;
+        }
+        .topic-title:hover {
+            opacity: 100%;
         }
         .options-container {
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: center;
+
+            .edit-button {
+                padding: 5px;
+                // border: 1px solid black;
+                border-radius: 5px;
+                margin: 5px;
+            }
+            .edit-button:hover {
+                color: red;
+                border: 1px solid red;
+                background-color: white;
+            }
+            .votes-container {
+                display:flex;
+                align-items: center;
+                font-size: 14pt;
+                font-weight: 700;
+            }
             .vote-button {
-                color: white;
+                color: inherit;
+                margin-left: 10px;
+            }
+            .vote-button:hover {
+                color: red;
+                opacity: 100%;
             }
             p {
                 margin: 5px;
@@ -96,6 +198,7 @@ body {
                 height: 100px;
                 border-radius: 5px;
                 font-size: 12pt;
+                border: none;
             }
         }
     
@@ -103,3 +206,19 @@ body {
     
 }
 
+.show-container {
+    background: white;
+    padding: 30px;
+    border-radius: 50px 50px 50px 0px;
+    max-width: 400px;
+    .edit-button {
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 5px;
+    }
+    .edit-button:hover {
+        color: red;
+        border: 1px solid red;
+    }
+}
