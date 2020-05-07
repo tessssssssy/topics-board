@@ -6,6 +6,7 @@
     <%= link_to "signup", new_user_registration_path %>
 <% end %>
 
+<<<<<<< HEAD
 <h1>
 <div class="content-container">
     <% @topics.each do |topic| %>
@@ -24,4 +25,17 @@
 
 
 
+=======
+<% topics = (0..10).to_a %>
+<% topics.each do |topic| %>
+    <div class="topic-container">
+        <h1>Topic title</h1>
+        <button>Vote</button>
+        <% if user_signed_in? %>
+          <button>Edit</button>
+          <button>Delete</button>
+        <% end %>
+    </div>
+<%end%>
+>>>>>>> 5cd9603071e05aeab7e5d5b81fea5acc8549e451
 

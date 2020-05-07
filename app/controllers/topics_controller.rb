@@ -1,6 +1,8 @@
 class TopicsController < ApplicationController
 
     before_action :find_topic ,only: [:show, :edit, :update, :destroy] 
+    before_action :authenticate_user!, except: [:index]
+    load_and_authorize_resource
 
     def index
       @topics = Topic.all
