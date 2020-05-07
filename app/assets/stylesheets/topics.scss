@@ -1,3 +1,112 @@
 // Place all the styles related to the Topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: 50px auto;
+    justify-content: center;
+    .topic-container:nth-of-type(4n) {
+        background-color: cyan;
+        border: 5px solid cyan;
+    }
+    .topic-container:nth-of-type(4n):hover {
+        background-color: white;
+        color: cyan; 
+        cursor: pointer;
+        h1 {
+            color: cyan;
+        }
+    }
+    .topic-container:nth-of-type(4n + 1) {
+        background-color: orangered;
+        border: 5px solid orangered;
+        
+    }
+    .topic-container:nth-of-type(4n + 1):hover {
+        background-color: white;
+        color: orangered;
+        cursor: pointer;
+        h1 {
+            color: orangered;
+            
+        }
+    }
+    .topic-container:nth-of-type(4n + 2) {
+        background-color: mediumvioletred;
+        border: 5px solid mediumvioletred;
+    }
+    .topic-container:nth-of-type(4n + 2):hover {
+        background-color: white;
+        color: mediumvioletred;
+        cursor: pointer;
+        h1 {
+            color: mediumvioletred;
+            
+        }
+    }
+    .topic-container {
+        border-radius: 50px;
+        background-color: cornflowerblue;
+        padding: 20px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .topic-title {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 24pt;
+            margin: 10px;
+        }
+        .vote-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .vote-button {
+                color: white;
+            }
+            p {
+                margin: 5px;
+            }
+        }
+        
+    }
+}
+
+.form-container {
+    margin: 75px auto;
+    width: 300px;
+    form {
+        display: flex;
+        margin: 0 auto;     
+        flex-direction: column;
+        height: 200px;
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0px;
+            input {
+                margin: 10px 0px;
+                border-radius: 5px;
+                font-size: 12pt;
+            }
+            textarea {
+                margin: 10px 0px;
+                height: 100px;
+                border-radius: 5px;
+                font-size: 12pt;
+            }
+        }
+    
+    }
+    
+}
+

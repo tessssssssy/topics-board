@@ -13,11 +13,11 @@ class TopicsController < ApplicationController
     end
 
     def create
-      @topic = Topic.new(topic_params)
+      @topic = current_user.topics.create(topic_params)
       # @topic.user = current_user
     
       if @topic.save
-        redirect_to @topics
+        redirect_to topics_path
       else
         render :new
       end
@@ -28,7 +28,7 @@ class TopicsController < ApplicationController
 
     def update
       if @topic.update(topic_params)
-        redirect_to @topics
+        redirect_to topics_path
       else
         render :edit
       end

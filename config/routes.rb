@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :topics
+  resources :topics do
+    resources :votes, only: [:create]
+  end
   root to: "topics#index"
   put '/', to: 'votes#update', as: "vote"
 
