@@ -1,5 +1,5 @@
-<div class="content-container">
 <h1>Topics Board</h1>
+<div class="content-container">
     <% @topics.each do |topic| %>
         <div class="topic-container">
             <h1 class="topic-title"><%=topic.title%></h1>
@@ -11,7 +11,6 @@
                 <%= link_to "Edit", "/topics/#{topic.id}/edit" %>
                 <%= link_to "Delete", "/topics/#{topic.id}", method: :delete %>  
              <%end%>        
-        </div>
         </div>
     <%end%>
 </div>
