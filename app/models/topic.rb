@@ -4,4 +4,5 @@ class Topic < ApplicationRecord
 
   validates :title, presence: true, length: { minimum: 2 }
   has_many :votes
+  has_one_attached :image
 end
