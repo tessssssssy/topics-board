@@ -1,0 +1,20 @@
+@import 'devise';
+@import 'topics';
+
+body {
+    background: linear-gradient(to right, #fc00ff, #00dbde);
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    margin-top: 20px;
+    a {
+        margin: 20px 20px;
+        text-align: right;
+        color: black;
+    }
+}

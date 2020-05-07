@@ -16,6 +16,7 @@ body {
     .topic-container:nth-of-type(4n) {
         background-color: cyan;
         border: 5px solid cyan;
+        border-radius: 50px 50px 0px 50px;
     }
     .topic-container:nth-of-type(4n):hover {
         background-color: white;
@@ -28,7 +29,7 @@ body {
     .topic-container:nth-of-type(4n + 1) {
         background-color: orangered;
         border: 5px solid orangered;
-        
+        border-radius: 50px 0px 50px 50px;
     }
     .topic-container:nth-of-type(4n + 1):hover {
         background-color: white;
@@ -42,6 +43,7 @@ body {
     .topic-container:nth-of-type(4n + 2) {
         background-color: mediumvioletred;
         border: 5px solid mediumvioletred;
+        border-radius: 0px 50px 50px 50px;
     }
     .topic-container:nth-of-type(4n + 2):hover {
         background-color: white;
@@ -53,7 +55,7 @@ body {
         }
     }
     .topic-container {
-        border-radius: 50px;
+        border-radius: 50px 50px 50px 0px;
         background-color: cornflowerblue;
         padding: 20px;
         margin: 10px;
