@@ -5,12 +5,18 @@
             <h1 class="topic-title"><%=topic.title%></h1>
             <div class="vote-container">
                 <button class="vote-button">Vote</button>
-                
-            </div>           
+                <p><%=topic.votes.length%> votes</p>
+            </div>
+            <% if current_user == topic.user %>
+                <%= link_to "Edit", "/topics/#{topic.id}/edit" %>
+                <%= link_to "Delete", "/topics/#{topic.id}", method: :delete %>  
+             <%end%>        
         </div>
         </div>
     <%end%>
 </div>
+
+
 
 
 
