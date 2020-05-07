@@ -7,8 +7,11 @@
                 <%= link_to "Vote", "/topics/#{topic.id}/votes", method: :post %>
                 <p><%=topic.votes.length%> votes</p>
             </div>
-            <% if current_user == topic.user %>
+            <% if can? :edit, topic %>
                 <%= link_to "Edit", "/topics/#{topic.id}/edit" %>
+            <% end %>
+
+            <% if can? :destroy, topic %>
                 <%= link_to "Delete", "/topics/#{topic.id}", method: :delete %>  
              <%end%>        
         </div>
