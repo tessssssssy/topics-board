@@ -4,7 +4,7 @@
         <div class="topic-container">
             <h1 class="topic-title"><%=topic.title%></h1>
             <div class="vote-container">
-                <button class="vote-button">Vote</button>
+                <%= link_to "Vote", "/topics/#{topic.id}/votes", method: :post %>
                 <p><%=topic.votes.length%> votes</p>
             </div>
             <% if current_user == topic.user %>
