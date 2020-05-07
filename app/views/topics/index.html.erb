@@ -1,20 +1,11 @@
-<% if user_signed_in? %>
-    <%= link_to "logout", destroy_user_session_path, method: :delete %>
-    
-<% else %>
-    <%= link_to "login", new_user_session_path %>
-    <%= link_to "signup", new_user_registration_path %>
-<% end %>
-
-<<<<<<< HEAD
-<h1>
 <div class="content-container">
+<h1>Topics Board</h1>
     <% @topics.each do |topic| %>
         <div class="topic-container">
-            <h1 class="topic-title">Authentication</h1>
+            <h1 class="topic-title"><%=topic.title%></h1>
             <div class="vote-container">
                 <button class="vote-button">Vote</button>
-                <p><%= topic.votes.length %></p>
+                
             </div>           
         </div>
         </div>
@@ -24,18 +15,4 @@
 
 
 
-
-=======
-<% topics = (0..10).to_a %>
-<% topics.each do |topic| %>
-    <div class="topic-container">
-        <h1>Topic title</h1>
-        <button>Vote</button>
-        <% if user_signed_in? %>
-          <button>Edit</button>
-          <button>Delete</button>
-        <% end %>
-    </div>
-<%end%>
->>>>>>> 5cd9603071e05aeab7e5d5b81fea5acc8549e451
 
