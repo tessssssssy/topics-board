@@ -14,49 +14,41 @@ body {
     margin: 50px auto;
     justify-content: center;
     .topic-container:nth-of-type(4n) {
-        background-color: cyan;
-        border: 5px solid cyan;
         border-radius: 50px 50px 0px 50px;
-    }
-    .topic-container:nth-of-type(4n):hover {
-        background-color: white;
-        color: cyan; 
-        cursor: pointer;
         h1 {
             color: cyan;
         }
     }
-    .topic-container:nth-of-type(4n + 1) {
-        background-color: orangered;
-        border: 5px solid orangered;
-        border-radius: 50px 0px 50px 50px;
-    }
-    .topic-container:nth-of-type(4n + 1):hover {
-        background-color: white;
-        color: orangered;
+    .topic-container:nth-of-type(4n):hover {
         cursor: pointer;
+    }
+    .topic-container:nth-of-type(4n + 1) {
+        background-color: white;
+        border: 5px solid white;
+        border-radius: 50px 0px 50px 50px;
+        color: orangered;
         h1 {
-            color: orangered;
-            
+            color: orangered;     
         }
     }
+    .topic-container:nth-of-type(4n + 1):hover {
+        cursor: pointer;
+    }
     .topic-container:nth-of-type(4n + 2) {
-        background-color: mediumvioletred;
-        border: 5px solid mediumvioletred;
+        color: mediumvioletred;
         border-radius: 0px 50px 50px 50px;
+        h1 {
+            color: mediumvioletred;          
+        }
     }
     .topic-container:nth-of-type(4n + 2):hover {
         background-color: white;
-        color: mediumvioletred;
         cursor: pointer;
-        h1 {
-            color: mediumvioletred;
-            
-        }
     }
     .topic-container {
         border-radius: 50px 50px 50px 0px;
-        background-color: cornflowerblue;
+        background-color: white;
+        border: 5px solid white;
         padding: 20px;
         margin: 10px;
         display: flex;
@@ -64,11 +56,10 @@ body {
         justify-content: center;
         .topic-title {
             font-family: Arial, Helvetica, sans-serif;
-            color: white;
             font-size: 24pt;
             margin: 10px;
         }
-        .vote-container {
+        .options-container {
             display: flex;
             justify-content: flex-start;
             align-items: center;

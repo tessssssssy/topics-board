@@ -3,18 +3,19 @@
     <% @topics.each do |topic| %>
         <div class="topic-container">
             <h1 class="topic-title"><%=topic.title%></h1>
-            <div class="vote-container">
+            <div class="options-container">
                 <%= link_to "Vote", "/topics/#{topic.id}/votes", method: :post %>
                 <p><%=topic.votes.length%> votes</p>
-            </div>
-            <% if current_user == topic.user %>
+                 <% if current_user == topic.user %>
                 <% if can? :edit, topic %>
                     <%= link_to "Edit", "/topics/#{topic.id}/edit" %>
                 <% end %>
                 <% if can? :destroy, topic %>
                     <%= link_to "Delete", "/topics/#{topic.id}", method: :delete %>  
                 <%end%>
-            <%end%>        
+            <%end%>   
+            </div>
+                
         </div>
     <%end%>
 </div>
