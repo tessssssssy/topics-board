@@ -5,7 +5,14 @@ class TopicsController < ApplicationController
     load_and_authorize_resource
 
     def index
-      @topics = Topic.all
+      @topics = Topic.find_by_sql("
+          SELECT topics.*, COUNT(votes.id) AS vote_count
+            FROM topics
+            LEFT JOIN votes
+              ON votes.topic_id = topics.id
+        GROUP BY topics.id
+        ORDER BY vote_count DESC,
+                 topics.updated_at DESC")
     end
 
     def show

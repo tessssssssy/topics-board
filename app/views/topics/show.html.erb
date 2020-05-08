@@ -3,6 +3,7 @@
 <div class="show-container">
             <h1 class="topic-title"><%=@topic.title%></h1>
             <p><%=@topic.description%></p>
+            <%= image_tag topic.image if topic.image.attached? %>
             <div class="vote-container">
                 <p><%=@topic.votes.length%> votes</p>
             </div>
