@@ -51,3 +51,6 @@ gem "cancancan", "~> 3.1"
 
 
 gem "aws-sdk-s3", "~> 1.63"
+
+
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
