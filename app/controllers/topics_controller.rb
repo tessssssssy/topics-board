@@ -15,6 +15,9 @@ class TopicsController < ApplicationController
                  topics.updated_at DESC")
     end
 
+    def show
+    end
+
     def new
       @topic = Topic.new
     end
