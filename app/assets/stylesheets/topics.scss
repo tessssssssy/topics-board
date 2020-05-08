@@ -269,6 +269,12 @@ body {
     padding: 30px;
     border-radius: 50px 50px 50px 0px;
     max-width: 400px;
+    img {
+        width: 80%;
+    }
+    a {
+        color: black;
+    }
     .edit-button {
         padding: 5px;
         border: 1px solid black;

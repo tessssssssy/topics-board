@@ -1,5 +1,4 @@
 class TopicsController < ApplicationController
-
     before_action :find_topic ,only: [:show, :edit, :update, :destroy] 
     before_action :authenticate_user!, except: [:index]
     load_and_authorize_resource
@@ -14,7 +13,9 @@ class TopicsController < ApplicationController
         ORDER BY vote_count DESC,
                  topics.updated_at DESC")
     end
-
+    # def index
+    #   @topics = Topic.all
+    # end
     def show
     end
 
@@ -51,7 +52,6 @@ class TopicsController < ApplicationController
     end
 
     private
-
   def topic_params
     params.require(:topic).permit(:title, :description, :image, :fixed, :archived)
   end
