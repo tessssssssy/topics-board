@@ -1,0 +1,41 @@
+.form-container {
+    margin: 75px auto;
+    width: 300px;
+    a {
+        text-decoration: none;
+    }
+    form {
+        display: flex;
+        margin: 0 auto;     
+        flex-direction: column;
+        height: 200px;
+        .actions {
+            input {
+                font-size: 12pt;
+                background-color: rgb(215, 224, 247);
+                border: 2px solid black;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            
+        }
+        .field {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0px;
+            input {
+                margin: 10px 0px;
+                border-radius: 5px;
+                font-size: 12pt;
+            }
+            textarea {
+                margin: 10px 0px;
+                height: 100px;
+                border-radius: 5px;
+                font-size: 12pt;
+            }
+        }
+    
+    }
+    
+}

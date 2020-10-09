@@ -1,0 +1,38 @@
+<div class="outer-container">
+<h1 class="heading">Class Helper</h1>
+<h3>A review class topic suggestion board</h3>
+<div class="content-container">
+    <% @topics.each do |topic| %>
+        <div class="topic-container">  
+            <%= link_to topic.title, topic, class: 'topic-title'%>
+            <div class="options-container">
+            <div class="votes-container">
+                <%= link_to ('<i class="fas fa-thumbs-up"></i>').html_safe, "/topics/#{topic.id}/votes", method: :post , class: "vote-button"%>
+                <p><%=topic.votes.length%></p>
+            </div>
+            <div class="button-container">
+                 <% if user_signed_in? && (current_user == topic.user || current_user.admin )%>
+               
+                    <%= link_to "Edit", "/topics/#{topic.id}/edit", class: 'edit-button' %>
+                
+                
+                    <%= link_to "Delete", "/topics/#{topic.id}", method: :delete, class: 'edit-button' %>  
+                
+            <%end%>
+            </div>   
+            </div>
+                
+        </div>
+    <%end%>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+

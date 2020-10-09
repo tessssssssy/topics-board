@@ -1,0 +1,27 @@
+@import 'devise';
+@import 'topics';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body {
+    background: linear-gradient(90deg, rgba(197,212,249,1) 0%, rgba(255,255,255,1) 100%);
+
+}
+
+a {
+    text-decoration: none;
+    text-align: right;
+}
+
+nav {
+    height: 50px;
+    a {
+        margin: 20px 20px;
+        text-align: right;
+        color: black;
+        font-size: 14pt;
+    }
+    a:hover {
+        color: white;
+    }
+}
