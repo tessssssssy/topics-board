@@ -1,24 +1,42 @@
-# README
+## Topics Board 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Link to the Website 
 
-Things you may want to cover:
+https://rocky-ocean-76869.herokuapp.com/
 
-* Ruby version
+### Test user to test website contents
 
-* System dependencies
+username: test,
 
-* Configuration
+email: "test@mail.com", 
 
-* Database creation
+password: "password"
 
-* Database initialization
 
-* How to run the test suite
+### Purpose
 
-* Services (job queues, cache servers, search engines, etc.)
+The purpose of the app is having a board for the class where every student can add their topic for the next masterclass / discussion session, and all classmates can vote. This will help the teachers understand what's in demand and prepare the topic.
 
-* Deployment instructions
 
-* ...
+### Using the website
+
+Any user is able to see the topics board, but only logged in users are able to see the contents of any topic, add new topics, and vote. 
+
+![](img/topics-board.png)
+
+![](img/topics-new-form.png)
+
+Every user is able to vote once on any particular topic. The votes are calculated and the total number of votes is shown on every topic on the board. The content of a topic shows the description, the image if one was uploaded, number of votes, and the names of the users who voted.
+
+![](img/topics-content.png)
+
+Users are able to edit and delete their own topics.
+
+![](img/topics-edit-delete.png)
+
+
+
+### Authentiacation and authorization
+
+Devise gem was used for users authentication;
+CanCanCan gem was used for authorization.
